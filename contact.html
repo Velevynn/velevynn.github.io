@@ -3,21 +3,86 @@
 <html>
   <head>
     <title>My Contacts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+      input[type=text], select, textarea {
+        width: 100%; 
+        padding: 12px; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        font-family: 'Libre Baskerville';
+      }
+
+      input[type=submit] {
+        background-color: #0060B6;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: 'Libre Baskerville';
+      }
+
+      input[type=submit]:hover {
+        background-color: #00A0C6;
+        font-family: 'Libre Baskerville';
+      }
+
+      .container {
+        border-radius: 5px;
+        background-color: #35281e;
+        padding: 20px;
+        color: white;
+        font-family: 'Libre Baskerville';
+        width: 33%;
+      }
+
+      h1 {
+        font-family: 'Fraunces'
+      }
+    </style>
   </head>
 
   <body>
-    <nav>
-        <h1 class="logo">Alexander Specht</h1>
+    <nav class="navbar">
+        <h1 class="logo"><a href="index.html">Alexander Specht</a></h1>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
     <main>
-        <h1 class="contact-title"></h1>
+      <h1> Send Me a Whisper</h1>
+      <div class="container">
+        <form>
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
 
     </main>
 
-    <footer>
+    <footer class="footer">
         © 2023 Xander's Website | All Rights Reserved
     </footer>
-    Hello World! These are my contacts.
   </body>
 </html>

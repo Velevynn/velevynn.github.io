@@ -3,48 +3,175 @@
 <html>
   <head>
     <title>My Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+         .resume h3 {
+            font-family: 'Libre Baskerville';
+            font-size: small
+          }
+
+          .resume h2 {
+            font-family: 'Libre Baskerville';
+          }
+        
+          .resume {
+            width: 75%;
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            padding-top: 2rem;
+          }
+        
+          .resume section {
+            display: inline;
+            border-left: dashed #5C4033 2px; 
+            padding-left: 1rem;
+          }
+
+          .resume-title {
+            font-family: 'Fraunces'
+          }
+        
+          #education, #coursework, #skills, #projects {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            padding-right: 1rem;
+          }
+        
+          #education {
+            grid-row: 1 / 2;
+          }
+        
+          #projects {
+            grid-row: 4 / 5;
+          }
+        
+          #experience,  #awards {
+            grid-column-start: 5;
+            grid-column-end: 10;
+          }
+        
+          #experience {
+            grid-row: 1 / 4;
+          }
+    </style>
   </head>
 
   <body>
-    <nav>
-        <h1 class="logo">Alexander Specht</h1>
+    <nav class="navbar">
+        <h1 class="logo"><a href="index.html">Alexander Specht</a></h1>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <div class="resume">
-            <h1 class="resume-title"></h1>
+    <main class="resume-main">
+        <h1 class="resume-title"><a href="resume.pdf" download >Resume</a></h1>
+        
+        <div class="resume" class="container">
 
-            <section class="section">
+            
+            <section class="section" id="education">
                 <h2 class="section-title">Education</h2>
+                <hr>
+                <div class="entry">
+                    <h3 class="entry-title">Cal Poly San Luis Obispo</h3>
+                    <p class="entry-info">
+                        Undergraduate 2021-2025<br>
+                        B.S. in Computer Science, May 2025. GPA: 3.756
+                    </p>
+                            
+                </div>
             </section>
             
-            <section class="section">
+            
+            
+            <section class="section" id="coursework">
                 <h2 class="section-title">Coursework</h2>
+                <hr>
+                <ul>
+                    <li>Data Structures</li>
+                    <li>Design and Analysis of Algorithms</li>
+                    <li>Systems Programming</li>
+                    <li>Introduction to Database Systems</li>
+                </ul>
             </section>
-
-            <section class="section">
-                <h2 class="section-title">Skills</h2>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Awards</h2>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Projects</h2>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Experience</h2>
-            </section>
+            
 
             
+            <section class="section" id="skills">
+                <h2 class="section-title">Skills</h2>
+                <hr>
+                <ul>
+                    <li>Fluent: Power BI, Web Intelligence, Python, VSCode.</li>
+                    <li>Proficient: HTML, CSS, Java, UML.</li>
+                    <li>Familiar: UX/UI Design, Unix, Git, Figma.</li>
+                </ul>
+            </section>
+            
+
+            
+            <section class="section" id="awards">
+                <h2 class="section-title">Awards</h2>
+                <hr>
+                <ul>
+                    <li>2023 USACE Performance Award: $1200</li>
+                    <li>Engineering Dean’s List: Fall 2021, Winter 2022, Spring 2022, Fall 2023, Winter 2023</li>
+                    <li>President’s Honors List: 2021 – 2022</li>
+                </ul>
+            </section>
+            
+
+            
+            <section class="section" id="projects">
+                <h2 class="section-title">Projects</h2>
+                <hr>
+                <div class="entry">
+                    <h3 class="entry-title">Personal Website</h3>
+                    <p class="entry-info">Designed and built a personal website using HTML and CSS.</p>
+                    <p class="entry-description"></p>
+                </div>
+            </section>
+            
+
+            
+            <section class="section" id="experience">
+                <h2 class="section-title">Experience</h2>
+                <hr>
+                <div class="entry">
+                    <h3 class="entry-title">Student Trainee GS02 -- United States Army Corps of Engineers</h3>
+                    <p class="entry-info">June 2021 - June 2022</p>
+                    <p class="entry-description">Planning Division
+                        <li>Prototyped an attendance collection process within the Microsoft 365 environment.</li>
+                        <li>Collaborated with trainees to transcribe and organize records of project documents.</li>
+                        <li>Redesigned inventory records through Excel PivotTables for efficient statistical analysis.</li>
+                    </p>
+                </div>
+
+                <div class="entry">
+                    <h3 class="entry-title">Student Trainee GS04 -- United States Army Corps of Engineers</h3>
+                    <p class="entry-info">June 2022 - Current</p>
+                    <p class="entry-description">Planning Division
+                        <li>Developed data visualization reports in Power BI for Enterprise Data Warehouse (EDW) repositories.</li>
+                        <li>Customized Web Intelligence (WebI) reports to display relevant project data tables.</li>
+                        <li>Automated data visualization reports through WebI and Power BI to track daily EDW data updates.</li>
+                        <li>Established and distributed personal inventory-tracking documents to Planning Division employees.</li>
+                    </p>
+                </div>
+            </section>
 
         </div>
  
     </main>
 
-    <footer>
+    <footer class="footer">
         © 2023 Xander's Website | All Rights Reserved
     </footer>
   </body>

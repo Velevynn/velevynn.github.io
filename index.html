@@ -3,21 +3,52 @@
 <html>
   <head>
     <title>My Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+
+        .about {
+            text-align: center;
+        }
+        img {
+            border: solid #35281e .5rem;
+        }
+
+        h1 {
+            font-family: 'Fraunces'
+        }
+
+        .about-text {
+            font-family: 'Libre Baskerville';
+            font-size: medium;
+        }
+    </style>
   </head>
 
   <body>
-    <nav>
-        <h1 class="logo">Alexander Specht</h1>
+    <nav class="navbar">
+        <h1 class="logo"><a href="index.html">Alexander Specht</a></h1>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
     <main>
-        <h1>Hello!</h1>
+        <h1>Rest your weary limbs for a moment, traveler...</h1>
         <div class="about">
             <div class="about-image">
-                <div class="about-text">
+                <img src="./forest-background.jpg" alt="forest background">
+                <h1>And let me introduce myself.</h1>
+                <div class="about-text" >
                     <p>My name is Alexander Specht, a third-year computer scientist studying at California Polytechnic University, San Luis Obispo.</p>
                     <p>I am mainly interested in full stack web development, artificial intelligence, and UXUI design.</p>
-                    <p>Outside of programming, I enjoy dancing with other clubs on campus, working out, and playing video games.</p>
+                    <p>Outside of programming, I enjoy dancing with other clubs on campus, working out, and reading.</p>
                 </div>
             </div>
         </div>
@@ -25,7 +56,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
         © 2023 Xander's Website | All Rights Reserved
     </footer>
     

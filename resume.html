@@ -21,7 +21,7 @@
             width: 75%;
             display: inline-grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: .5fr .5fr .5fr 1fr 1fr 1fr 1fr 1fr;
             padding-top: 2rem;
           }
         
@@ -35,27 +35,36 @@
             font-family: 'Fraunces'
           }
         
-          #education, #coursework, #skills, #projects {
+          #education, #coursework, #skills, #awards {
             grid-column-start: 2;
             grid-column-end: 5;
             padding-right: 1rem;
           }
         
           #education {
-            grid-row: 1 / 2;
+            grid-row: 1;
+          }
+
+          #coursework {
+            grid-row: 2;
+          }
+
+          #skills {
+            grid-row: 3;
           }
         
-          #projects {
-            grid-row: 4 / 5;
+          #awards {
+            grid-row: 4;
           }
-        
-          #experience,  #awards {
+          
+          #experience,  #projects {
             grid-column-start: 5;
             grid-column-end: 10;
           }
         
           #experience {
-            grid-row: 1 / 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
           }
     </style>
   </head>
